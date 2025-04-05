@@ -33,4 +33,5 @@ langgraph
 langchain-anthropic 
 tavily-python 
 langgraph-checkpoint-sqlite
+streamlit
 
