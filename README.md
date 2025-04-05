@@ -113,21 +113,7 @@ streamlit run app.py
 6. If the campaign is not ready, the cycle continues until the system responds with:\
    **“FINAL ANSWER”**.
 
----
 
-## 🖼️ Screenshots
-
-> (https://github.com/AnshulBuxy/CampaignBot/blob/main/Screenshot%202025-04-05%20182635.png)
-
-### 🧑‍🎼 Agent Interaction
-
-
-
-### 💬 Streamlit Interface
-
-
-
-### 🧠 Final Campaign Output
 
 
 
