@@ -117,7 +117,7 @@ streamlit run app.py
 
 ## 🖼️ Screenshots
 
-> Replace the image paths below with your actual screenshots.
+> (https://github.com/AnshulBuxy/CampaignBot/blob/main/Screenshot%202025-04-05%20182635.png)
 
 ### 🧑‍🎼 Agent Interaction
 
