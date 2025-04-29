@@ -1,14 +1,14 @@
-# 🧠 ZClap: AI-Powered Campaign Assistant
+# 🧠 CampaignBot: AI-Powered Campaign Assistant
 
 > A multi-agent LLM system that generates smart, creative, and data-driven marketing campaigns using LangGraph, LangChain, and Streamlit.
 
-![Screenshot](./assets/screenshot.png) <!-- Replace this with your actual screenshot -->
+![Screenshot](https://github.com/AnshulBuxy/CampaignBot/blob/main/WhatsApp%20Image%202025-04-29%20at%2018.35.30_49945f43.jpg) <!-- Replace this with your actual screenshot -->
 
 ---
 
-## 🚀 What Does ZClap Do?
+## 🚀 What Does CampaignBot Do?
 
-ZClap is your **AI-powered marketing team** in a box.
+It is your **AI-powered marketing team** in a box.
 
 Provide:
 - 📦 Product name  
@@ -16,7 +16,7 @@ Provide:
 - 🎯 Target audience  
 - 💰 Campaign budget  
 
-ZClap simulates a full team — Content Writer, Graphic Designer, Data Analyst, and Brand Manager — to produce a complete marketing campaign that includes:
+It simulates a full team — Content Writer, Graphic Designer, Data Analyst, and Brand Manager — to produce a complete marketing campaign that includes:
 - Catchy slogans & tone  
 - Visual identity suggestions  
 - Trend + market validation  
@@ -29,7 +29,7 @@ ZClap simulates a full team — Content Writer, Graphic Designer, Data Analyst, 
 
 ## 🧠 How It Works – LangGraph Architecture
 
-ZClap uses **LangGraph**, a framework built on LangChain for multi-agent workflows.  
+It uses **LangGraph**, a framework built on LangChain for multi-agent workflows.  
 It defines a structured graph where each agent contributes step-by-step and loops continue until the Brand Manager produces a final answer.
 
 ### 🧩 Agent Collaboration Flow
@@ -73,7 +73,6 @@ graph TD
 ### 🧠 Brand Manager  
 **Role:** Final evaluator & decision maker  
 **Tools:**
-- `BrandBookReader` – summarize a PDF brand guideline (if uploaded)  
 - Outputs a final structured campaign in 10 sections  
 
 ---
@@ -95,14 +94,12 @@ graph TD
 ## 📁 File Structure
 
 ```bash
-zclap-campaign-bot/
-├── campaign_tools.py        # Tools given to each agent
-├── zclap.py                 # LangGraph architecture & agent logic
-├── app.py                   # Streamlit frontend
-├── .env                     # API keys and config
-├── assets/
-│   └── screenshot.png       # App screenshot (optional)
-└── README.md                # You're here!
+campaign-bot/
+├── campaign_tools_corrected.py        # Tools given to each agent
+├── backend.py                         # LangGraph architecture & agent logic
+├── app.py                             # Streamlit frontend
+├── .env                               # API keys and config
+└── README.md                          # You're here!
 ```
 ---
 
