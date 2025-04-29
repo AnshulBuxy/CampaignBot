@@ -4,6 +4,14 @@
 
 ![Screenshot](https://github.com/AnshulBuxy/CampaignBot/blob/main/WhatsApp%20Image%202025-04-29%20at%2018.35.30_49945f43.jpg) <!-- Replace this with your actual screenshot -->
 
+## 🎞️Demo (Quick Preview)
+
+Here’s a quick glimpse of theassistant in action:
+
+![ZClap Demo](./assets/demo.gif)
+
+> 📌 The GIF shows how it takes a product description and automatically collaborates between agents to generate a full campaign.
+
 ---
 
 ## 🚀 What Does CampaignBot Do?
