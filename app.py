@@ -15,7 +15,7 @@ from fpdf import FPDF
 import base64
 import streamlit as st
 from langgraph.graph import MessagesState
-from adv_zclap import run_chatbot
+from backend import run_chatbot
 
 def extract_text_from_pdf(uploaded_file):
     text = ""
