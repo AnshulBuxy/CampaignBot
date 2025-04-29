@@ -16,9 +16,8 @@ llm = ChatGoogleGenerativeAI(
     max_retries=2,
 )
 
-# ===========================
 # Content Writer Tools
-# ===========================
+
 
 def rewrite_tone_tool(input_str):
     try:
@@ -69,9 +68,9 @@ content_writer_tools = [
     )
 ]
 
-# ===========================
+
 # Graphic Designer Tools
-# ===========================
+
 
 def palette_generator_tool(input_str):
     emotion = input_str.lower().strip()
@@ -117,9 +116,9 @@ graphic_designer_tools = [
     )
 ]
 
-# ===========================
+
 # Data Analyst Tools
-# ===========================
+
 
 def trend_data_tool(input_str):
     keyword = input_str.strip()
@@ -141,9 +140,8 @@ data_analyst_tools = [
     Tool(name="DataSearch", func=search.run, description="Use this tool to get relevant data and insights.")
 ]
 
-# ===========================
 # Brand Manager Tools
-# ===========================
+
 
 def brand_book_reader_tool(input_str):
     file_path = input_str.strip()
