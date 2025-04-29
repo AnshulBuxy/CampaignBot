@@ -35,4 +35,9 @@ tavily-python
 langgraph-checkpoint-sqlite
 streamlit
 langchain_mistralai
+pdfplumber
+pytrends
+bs4
+fpdf  
+pymupdf
 
