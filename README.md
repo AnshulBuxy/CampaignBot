@@ -8,7 +8,7 @@
 
 Here’s a quick glimpse of theassistant in action:
 
-![ZClap Demo](./assets/demo.gif)
+![ZClap Demo](https://github.com/AnshulBuxy/CampaignBot/blob/main/Streamlit_campaing-ezgif.com-video-to-gif-converter.gif)
 
 > 📌 The GIF shows how it takes a product description and automatically collaborates between agents to generate a full campaign.
 
