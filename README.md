@@ -96,7 +96,7 @@ graph TD
 | **pytrends**        | Scrape Google Trends data                |
 | **BeautifulSoup**   | Scrape slogans from Wikiquote             |
 | **pymupdfr**      | Extract text from brand books (PDFs)      |
-| ** TavilySearch**      | For Internet Search      |
+| **TavilySearch**      | For Internet Search      |
 
 ---
 
