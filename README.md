@@ -95,7 +95,8 @@ graph TD
 | **Streamlit**       | Interactive frontend                      |
 | **pytrends**        | Scrape Google Trends data                |
 | **BeautifulSoup**   | Scrape slogans from Wikiquote             |
-| **pdfplumber**      | Extract text from brand books (PDFs)      |
+| **pymupdfr**      | Extract text from brand books (PDFs)      |
+| ** TavilySearch**      | For Internet Search      |
 
 ---
 
