@@ -1,78 +1,112 @@
-# 📣 Multi-Agent Chatbot for Campaign Design
+# 🧠 ZClap: AI-Powered Campaign Assistant
 
-A smart, modular chatbot that helps create effective marketing campaigns using **LangGraph**, **LangChain**, and Generative AI.
+> A multi-agent LLM system that generates smart, creative, and data-driven marketing campaigns using LangGraph, LangChain, and Streamlit.
 
----
-
-## 🧠 Overview
-
-This project builds a **multi-agent chatbot** that simulates a team of experts collaborating to generate creative, data-driven marketing strategies for a product or brand. Each AI agent is responsible for a specific role in the campaign design process. The system leverages **LangGraph** to control the flow between agents and **LangChain** for handling interactions with language models. Additionally, real-world data is fetched using **TavilySearch** with **RAG (Retrieval-Augmented Generation)** techniques to enhance response accuracy.
+![Screenshot](./assets/screenshot.png) <!-- Replace this with your actual screenshot -->
 
 ---
 
-## ✨ Features
+## 🚀 What Does ZClap Do?
 
-- **🔗 Multi-Agent Collaboration**\
-  AI agents represent key roles:
+ZClap is your **AI-powered marketing team** in a box.
 
-  - Content Writer
-  - Graphic Designer
-  - Data Analyst
-  - Brand Manager
+Provide:
+- 📦 Product name  
+- 📝 Description  
+- 🎯 Target audience  
+- 💰 Campaign budget  
 
-- **🧽 LangChain + LangGraph Integration**\
-  LangGraph defines how agents interact, while LangChain connects to the LLM.
-
-- **🌐 Web Search Tool**\
-  The Data Analyst uses TavilySearch to pull live stats, news, and trends.
-
-- **📚 RAG (Retrieval-Augmented Generation)**\
-  Incorporates retrieved data directly into responses for better factual accuracy.
-
-- **⚙️ Modular Design**\
-  Easily extendable with more agents or features.
-
-- **🗅️ Streamlit-Based UI**\
-  Simple and clean frontend to interact with the chatbot.
+ZClap simulates a full team — Content Writer, Graphic Designer, Data Analyst, and Brand Manager — to produce a complete marketing campaign that includes:
+- Catchy slogans & tone  
+- Visual identity suggestions  
+- Trend + market validation  
+- Budget distribution  
+- Influencer strategy  
+- Timeline  
+- KPIs & more
 
 ---
 
-## 🧱 Architecture
+## 🧠 How It Works – LangGraph Architecture
 
-Each agent takes a turn in the conversation flow, building upon the previous agent's input:
+ZClap uses **LangGraph**, a framework built on LangChain for multi-agent workflows.  
+It defines a structured graph where each agent contributes step-by-step and loops continue until the Brand Manager produces a final answer.
 
-```text
-User Input ➞ Content Writer ➞ Graphic Designer ➞ Data Analyst ➞ Brand Manager ➞ Final Campaign Output
+### 🧩 Agent Collaboration Flow
+
+```mermaid
+graph TD
+    Start --> ContentWriter
+    ContentWriter --> GraphicDesigner
+    GraphicDesigner --> DataAnalyst
+    DataAnalyst --> BrandManager
+    BrandManager -->|Needs Rework| ContentWriter
+    BrandManager -->|FINAL ANSWER| End
+
 ```
+## 🧑‍💼 The Agents and Their Tools
 
-### 🧑‍🎼 Agents
-
-| Agent            | Role                                                                 |
-| ---------------- | -------------------------------------------------------------------- |
-| Content Writer   | Creates slogans, taglines, ad copies                                 |
-| Graphic Designer | Recommends themes, layouts, visual ideas                             |
-| Data Analyst     | Fetches supporting data using TavilySearch                           |
-| Brand Manager    | Aligns responses, ensures brand consistency, resolves contradictions |
-
-Control flow is managed using **LangGraph**, allowing each agent to act sequentially until the **final campaign proposal** is ready.
+### ✍️ Content Writer  
+**Role:** Creative copywriting  
+**Tools:**
+- `RewriteTone` – rewrite text based on tone, product, and audience  
+- `CopyInspo` – fetch ad slogans from Wikiquote  
 
 ---
 
-## 🧠 Technologies Used
-
-| Technology                                       | Purpose                                              |
-| ------------------------------------------------ | ---------------------------------------------------- |
-| **LangChain**                                    | Handles LLM-based agent responses                    |
-| **LangGraph**                                    | Orchestrates the multi-agent flow                    |
-| **Google Generative AI (Gemini-2.0-flash-lite)** | Main LLM for content generation                      |
-| **TavilySearch**                                 | Enables real-time web search for relevant data       |
-| **RAG**                                          | Blends retrieved knowledge into the responses        |
-| **Streamlit**                                    | Simple UI to interact with the chatbot               |
-| **Python + dotenv**                              | Backend language and environment variable management |
+### 🎨 Graphic Designer  
+**Role:** Visual brand identity  
+**Tools:**
+- `PaletteGenerator` – suggest color palette by emotion  
+- `FontSuggester` – suggest fonts by brand voice  
 
 ---
 
-## ⚙️ Installation & Setup
+### 📊 Data Analyst  
+**Role:** Validate ideas using real-world data  
+**Tools:**
+- `TrendData` – check keyword popularity with Google Trends  
+- `Search` – perform external research for latest articles and trends  
+
+---
+
+### 🧠 Brand Manager  
+**Role:** Final evaluator & decision maker  
+**Tools:**
+- `BrandBookReader` – summarize a PDF brand guideline (if uploaded)  
+- Outputs a final structured campaign in 10 sections  
+
+---
+
+## ⚙️ Technologies Used
+
+| Tool/Library       | Purpose                                   |
+|--------------------|-------------------------------------------|
+| **LangGraph**       | Agent coordination workflow               |
+| **LangChain**       | LLM + tool interface                      |
+| **Google Gemini API** | LLM for reasoning                         |
+| **Streamlit**       | Interactive frontend                      |
+| **pytrends**        | Scrape Google Trends data                |
+| **BeautifulSoup**   | Scrape slogans from Wikiquote             |
+| **pdfplumber**      | Extract text from brand books (PDFs)      |
+
+---
+
+## 📁 File Structure
+
+```bash
+zclap-campaign-bot/
+├── campaign_tools.py        # Tools given to each agent
+├── zclap.py                 # LangGraph architecture & agent logic
+├── app.py                   # Streamlit frontend
+├── .env                     # API keys and config
+├── assets/
+│   └── screenshot.png       # App screenshot (optional)
+└── README.md                # You're here!
+```
+---
+
+## ⚙ Installation & Setup
 
 ### 📦 Prerequisites
 
@@ -93,33 +127,6 @@ pip install -r requirements.txt
 
 # Step 3: Run the app
 streamlit run app.py
+
 ```
-
 ---
-
-## 🚀 How It Works
-
-1. User inputs a prompt like:\
-   *“Create a campaign for an eco-friendly smartwatch.”*
-
-2. The **Content Writer** generates ad copy and slogans.
-
-3. The **Graphic Designer** proposes visuals and branding elements.
-
-4. The **Data Analyst** pulls data insights from the web using **TavilySearch**.
-
-5. The **Brand Manager** reviews and finalizes the entire proposal.
-
-6. If the campaign is not ready, the cycle continues until the system responds with:\
-   **“FINAL ANSWER”**.
-
-
-
-
-
----
-
-## 📌 Final Thoughts
-
-This chatbot simulates a collaborative marketing team powered entirely by AI agents. It’s modular, easy to scale, and demonstrates how advanced LLM workflows like **LangGraph** can be used in real-world applications.
-
