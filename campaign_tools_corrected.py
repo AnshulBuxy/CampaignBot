@@ -140,25 +140,3 @@ data_analyst_tools = [
     Tool(name="DataSearch", func=search.run, description="Use this tool to get relevant data and insights.")
 ]
 
-# Brand Manager Tools
-
-
-def brand_book_reader_tool(input_str):
-    file_path = input_str.strip()
-    try:
-        text = ""
-        with pdfplumber.open(file_path) as pdf:
-            for page in pdf.pages[:5]:
-                text += page.extract_text() + "\n"
-        prompt = f"Summarize the following brand guideline:\n\n{text}"
-        return llm.invoke(prompt).content
-    except Exception as e:
-        return "Error reading brand book."
-
-brand_manager_tools = [
-    Tool(
-        name="BrandBookReader",
-        func=brand_book_reader_tool,
-        description="Upload a brand book PDF and get a summarized overview. Input must be the file path string."
-    )
-]
