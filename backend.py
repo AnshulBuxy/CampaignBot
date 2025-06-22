@@ -34,8 +34,7 @@ llm = ChatGoogleGenerativeAI(
 from campaign_tools_corrected import (
     content_writer_tools,
     graphic_designer_tools,
-    data_analyst_tools,
-    brand_manager_tools,
+    data_analyst_tools
 )
 
 # Agent identity enforcement
